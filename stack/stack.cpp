@@ -51,6 +51,7 @@ void insertData(int value){
 int deleteData(){
     if(isEmpty()){
         cout<<"Stack is empty";
+        return -1;
     }else{
        int a= stack[top];
        top--;
@@ -58,8 +59,18 @@ int deleteData(){
     }
 }
 
+void showStack(){
+    int temp= top;
+    cout<<"The Stack element is: ";
+    while(temp>=0){
+        cout<<stack[temp]<<" ";
+        temp--;
+    }
+}
 
 int main(){
     insertData(5);
     insertData(10);
+    insertData(15);
+    showStack();
 }
